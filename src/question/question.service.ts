@@ -131,12 +131,25 @@ export class QuestionService {
     };
   }
 
-  createAddQuestion(createQuestionDto: CreateQuestionDto) {
+  insertAddQuestion(createQuestionDto: CreateQuestionDto) {
     return 'createAddQuestion';
   }
 
   findAddQuestionList(id: string) {
-    return `findAddQuestionList`;
+    return [
+      {
+        idx: '1',
+        addQuestionText: '서버에서 온 질문이당',
+        limitTime: 3,
+        type: 'none',
+      },
+      {
+        idx: '2',
+        addQuestionText: '서버에서 온 질문이당2',
+        limitTime: 1,
+        type: 'none',
+      },
+    ];
   }
 
   updateAddQuesiton(id: string, updateQuestionDto: UpdateQuestionDto) {

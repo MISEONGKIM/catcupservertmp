@@ -21,11 +21,11 @@ export class QuestionController {
   }
 
   @Post('/add')
-  createAddQuestion(@Body() createQuestionDto: CreateQuestionDto) {
-    return this.questionService.createAddQuestion(createQuestionDto);
+  insertAddQuestion(@Body() createQuestionDto: CreateQuestionDto) {
+    return this.questionService.insertAddQuestion(createQuestionDto);
   }
 
-  @Get('/add')
+  @Get('/add/:id')
   findAddQuestionList(@Param('id') id: string) {
     return this.questionService.findAddQuestionList(id);
   }
